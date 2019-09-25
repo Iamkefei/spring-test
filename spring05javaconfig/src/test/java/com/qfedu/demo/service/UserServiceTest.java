@@ -1,4 +1,4 @@
-package com.qfedu.demo.web;
+package com.qfedu.demo.service;
 
 import com.qfedu.demo.config.AppConfig;
 import org.junit.Test;
@@ -8,14 +8,13 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-//@ContextConfiguration(classes= AppConfig.class)
-@ContextConfiguration("classpath:applicationContext.xml")
-public class UserControllerTest {
+@ContextConfiguration(classes= AppConfig.class)
+public class UserServiceTest {
     @Autowired
-    private UserController userController;
+    private UserService userService;
 
     @Test
     public void testAdd() {
-        userController.add();
+        userService.add();
     }
 }
